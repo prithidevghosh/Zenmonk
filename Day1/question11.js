@@ -5,9 +5,11 @@ let array=[6,2,3,4,5];
 let first_num=array[0];
 
 for(let i=1;i<array.length;i++){
-    let temp=array[i-1];
-    array[i-1]=array[i];
-    array[i]=temp;
+    // let temp=array[i-1];
+    // array[i-1]=array[i];
+    // array[i]=temp;
+
+    [array[i-1], array[i]] = [array[i], array[i-1]];
 
 }
 

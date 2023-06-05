@@ -4,7 +4,7 @@
 const fun=(arr)=>{
     const filtered_array=arr.filter((num)=>{
     
-        if(num>=0) return num;
+        return num>=0;
     })
     
     return filtered_array;

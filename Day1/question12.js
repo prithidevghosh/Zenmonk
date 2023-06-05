@@ -6,9 +6,7 @@ let p1=0,p2=array.length-1;
 
 while(p1<=p2){
     // console.log(`p1 is ${array[p1]} ,p2 is ${array[p2]}`);
-    let temp=array[p1];
-    array[p1]=array[p2];
-    array[p2]=temp;
+    [array[p1],array[p2]]=[array[p2],array[p1]];
     p1++;
     p2--;
 }
