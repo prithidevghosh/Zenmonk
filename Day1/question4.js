@@ -1,10 +1,9 @@
+//pallindrome algorithm
+
 let original_input=454;
 
 let reversed_input= original_input.toString().split('').reverse().join('');
 
-
-// console.log(original_input);
-// console.log(reversed_input);
 
 if(original_input.toString()===reversed_input){
  

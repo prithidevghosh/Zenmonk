@@ -1,3 +1,5 @@
+//print first 100 prime numbers
+
 const sieve=()=>{
     let array=new Array(50001).fill(1);
     

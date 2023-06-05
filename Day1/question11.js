@@ -1,9 +1,16 @@
-let array=[2,3,4,5];
+//rotate an array to left by 1 position
 
-let num1=array[0];
+let array=[6,2,3,4,5];
 
-let array_clone=array.slice(1);
+let first_num=array[0];
 
-array_clone.push(num1);
+for(let i=1;i<array.length;i++){
+    let temp=array[i-1];
+    array[i-1]=array[i];
+    array[i]=temp;
 
-console.log(array_clone);
+}
+
+array[array.length-1]=first_num;
+
+console.log(array);

@@ -1,3 +1,5 @@
+//function to return if a number is boolean or not depending on whether the number is prime or not
+
 const sieve=(n)=>{
    let array=new Array(n+1).fill(1);
    
@@ -21,11 +23,16 @@ const sieve=(n)=>{
     return new_array;
 }
 
-let num=6972;
-let primes=sieve(num);
-if(primes[primes.length-1]==num){
-    console.log("yes prime");
+
+
+const fun=(num)=>{
+    let primes=sieve(num);
+    if(primes[primes.length-1]==num){
+        return true;
+    }
+    else{
+        return false;
+    }
 }
-else{
-    console.log("not prime");
-}
+
+console.log(fun(23));

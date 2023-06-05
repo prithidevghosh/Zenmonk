@@ -1,3 +1,5 @@
+//first 10 fibonacci series without recursion
+
 let num1=0,num2=1;
 
 console.log(num1);

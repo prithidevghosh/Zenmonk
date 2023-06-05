@@ -1,33 +1,38 @@
-const sieve=(n)=>{
-    let array=new Array(n+1).fill(1);
+//function to return an array the first "nPrime" prime numbers greater than 
+// a particular number "startAt"
+
+const sieve=(size,n)=>{
+    let array=new Array(size+1).fill(1);
     
-    for(let i=2;i<=n;i++){
+    for(let i=2;i<=size;i++){
         if(array[i]==1){
     
  
-           for(let j=i*i;j<=n;j+=i){
+           for(let j=i*i;j<=size;j+=i){
               array[j]=0;
            }
         }
     }
     let new_array=[];
- 
-     for(let k=2;k<=n;k++){
+   let counter=0;
+     for(let k=2;k<=size;k++){
          if(array[k]==1){
+            counter++;
             new_array.push(k);
+            if(counter==n){break};
          }
      }
  
      return new_array;
  }
 
-const array_return=(start,num)=>{
+const array_return=(start,total)=>{
 
-    let array=sieve(num);
+    let array=sieve(total*10,total);
 
-    let output=array.filter((num)=>{
-         if(num>=start){
-            return num;
+    let output=array.filter((n)=>{
+         if(n>=start){
+            return n;
          }
     })
 

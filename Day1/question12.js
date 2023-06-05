@@ -1,3 +1,5 @@
+//reverse an array
+
 let array=[1,2,3,4];
 
 let p1=0,p2=array.length-1;

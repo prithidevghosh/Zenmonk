@@ -1,8 +1,15 @@
-const arr= [0,2,-1,-3,5];
+//function to filter only positive numbers from an array
 
-const filtered_array=arr.filter((num)=>{
-    // console.log(num);
-    if(num>=0) return num;
-})
 
-console.log(filtered_array);
+const fun=(arr)=>{
+    const filtered_array=arr.filter((num)=>{
+    
+        if(num>=0) return num;
+    })
+    
+    return filtered_array;
+}
+
+let output=fun([1,2,-4,-3,-2,4,6]);
+
+console.log(output);

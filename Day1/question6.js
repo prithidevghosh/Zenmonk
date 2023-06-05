@@ -1,3 +1,5 @@
+//max number in an array of numbers
+
 const arr= [0,2,-1,-3,5];
 
 let max_num=Number.NEGATIVE_INFINITY;

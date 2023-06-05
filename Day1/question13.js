@@ -1,3 +1,5 @@
+//reverse a string
+
 let string="hello";
 
 let dulicate="";
