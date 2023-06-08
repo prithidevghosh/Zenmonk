@@ -124,22 +124,43 @@ let indica_car = new Car("indica", "tata");
 
 bookings.push(alto_car, indica_car);
 
-const name = prompt("Enter your name: ");
-const contact = prompt("Enter your contact number: ");
+while (true) {
+    const name = prompt("Enter your name: ");
+    const contact = prompt("Enter your contact number: ");
 
-let prithvi_customer = new Customer(name, contact);
+    let prithvi_customer = new Customer(name, contact);
 
-const carId = prompt("Enter the ID of the car you want to book: ");
-prithvi_customer.bookings = parseInt(carId);
+    // Display available car IDs
+    console.log("Available Car IDs:", Object.keys(cars_map));
 
-console.log(prithvi_customer.getDetails());
-console.log("Current Bookings:", prithvi_customer.currentBookings);
-console.log("Past Bookings:", prithvi_customer.pastBookings);
+    const carId = prompt("Enter the ID of the car you want to book: ");
+    const carIdInt = parseInt(carId);
+    if (!Object.keys(cars_map).includes(carId) || !alto_car.isAvailable()) {
+        console.error("Invalid car ID or car is already booked");
+        continue;
+    }
 
-prithvi_customer.completeBooking();
-console.log("Current Bookings:", prithvi_customer.currentBookings);
-console.log("Past Bookings:", prithvi_customer.pastBookings);
+    prithvi_customer.bookings = carIdInt;
 
-prithvi_customer.cancelBooking();
-console.log("Current Bookings:", prithvi_customer.currentBookings);
-console.log("Past Bookings:", prithvi_customer.pastBookings);
+    console.log(prithvi_customer.getDetails());
+    console.log("Current Bookings:", prithvi_customer.currentBookings);
+    console.log("Past Bookings:", prithvi_customer.pastBookings);
+
+    if (prithvi_customer.currentBookings.length > 0) {
+        const option = prompt("Do you want to complete or cancel the booking? (Type 'complete' or 'cancel'): ");
+        if (option === "complete") {
+            prithvi_customer.completeBooking();
+        } else if (option === "cancel") {
+            prithvi_customer.cancelBooking();
+        }
+
+        else {
+            console.log("Invalid option. Booking not completed or canceled.");
+        }
+    } else {
+        console.log("No current bookings. Skipping the option to complete or cancel a booking.");
+    }
+
+    console.log("Current Bookings:", prithvi_customer.currentBookings);
+    console.log("Past Bookings:", prithvi_customer.pastBookings);
+}
