@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+
+<body>
+    <nav>
+        <span><a href="homePage.html">Home</a></span>
+        <span style="float: right;"><a href="index.html">Log In</a></span>
+        <span style="float: right;"><a href="signup.html">Sign Up</a></span>
+    </nav>
+    <div id="alertbox"></div>
+    <div id="container">
+        <div>
+            <img id="cart_img" src="/photos/Group.png">
+        </div>
+        <div>
+            <form id="registerForm" action="">
+                <input id="email" type="email" placeholder="EMAIL" required>
+                <input id="contact" type="number" placeholder="CONTACT" required>
+                <input id="username" type="text" placeholder="USERNAME" required>
+                <input id="password" type="password" placeholder="PASSWORD" required>
+
+                <button>Register</button>
+
+            </form>
+            <a href="https://www.google.co.in/" id="forgot_password">Forgot password?</a>
+        </div>
+    </div>
+
+
+    <script>
+        var links = document.getElementsByTagName('a');
+
+        for (let i = 0; i < links.length; i++) {
+            links[i].addEventListener("click", (e) => {
+                // e.preventDefault();
+
+            })
+        }
+
+
+
+        registerForm.addEventListener("submit", (e) => {
+            let registerForm = document.getElementById("registerForm");
+            let email = document.getElementById("email").value;
+            let contact = document.querySelector("#contact").value;
+            let username = document.getElementById("username").value;
+            let password = document.getElementById("password").value;
+            let alertBox = document.getElementById("alertbox");
+
+
+            if (password.match(/[^0-9a-z]/i))
+                alert("Only letters and digits allowed!");
+            else if (!password.match(/\d/))
+                alert("At least one digit required!");
+            else if (!password.match(/[a-z]/i))
+                alert("At least one letter required!");
+
+        })
+
+    </script>
+</body>
+
+
+
+</html>

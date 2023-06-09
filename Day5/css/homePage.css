@@ -1,0 +1,221 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    height: 5vh;
+    width: 100vw;
+    padding: 1em;
+    color: aliceblue;
+    background-color: rgb(36, 36, 90);
+    font-size: large;
+    font-weight: bolder;
+    position: fixed;
+}
+
+span {
+    margin-left: 4em;
+}
+
+a {
+    text-decoration: none;
+    color: aliceblue;
+}
+
+body {
+    background-color: #2148C0;
+    background-image: url(/photos/BG.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.card {
+    width: 50vw;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    margin: auto;
+    margin-top: 5em;
+
+}
+
+.card img {
+    width: 20%;
+    height: 0%;
+    margin-bottom: 10px;
+}
+
+.card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.card .price {
+    font-weight: bold;
+}
+
+.card button {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+
+
+#items {
+    height: 20vh;
+    width: 50vw;
+    border: 1px solid white;
+    margin: auto;
+    margin-top: 5em;
+
+}
+
+#items img {
+    height: 50%;
+    width: 40%;
+
+}
+
+#containerItems {
+    position: absolute;
+    z-index: -1;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: 2em
+}
+
+
+#container {
+
+    height: 50vh;
+    width: 25vw;
+    margin: auto;
+    margin-top: 10em;
+
+    /* border: 1px solid white; */
+}
+
+#cart_img {
+    margin-left: 10em;
+    margin-bottom: 2em;
+}
+
+input {
+    width: 98%;
+    height: 3.8em;
+
+    margin-top: 2em;
+    border: 1.4px solid white;
+    border-radius: 0.5em;
+    background-color: #2148C0;
+    padding-left: 4.5em;
+}
+
+input:focus {
+    outline: none;
+    color: aliceblue;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+input::-webkit-input-placeholder {
+    color: rgb(253, 252, 252) !important;
+}
+
+#email {
+    background: url(/photos/icons8-email-25.png) no-repeat left 1.4em center;
+
+
+}
+
+#contact {
+
+    background: url(/photos/icons8-call-16.png) no-repeat left 1.4em center;
+}
+
+
+#username {
+
+    background: url(/photos/user.png) no-repeat left 1.4em center;
+
+}
+
+#password {
+    background: url(/photos/lock.png) no-repeat left 1.4em center;
+
+}
+
+button {
+    width: 97%;
+    height: 3.4em;
+    margin-top: 4em;
+    border-radius: 0.5em;
+    color: #2148C0;
+
+    font-size: medium;
+    font-weight: bolder;
+}
+
+#forgot_password {
+    color: aliceblue;
+    font-weight: bolder;
+    float: right;
+    margin-top: 0.6em;
+    margin-right: 1em;
+    text-decoration: none;
+}
+
+
+/* Media queries for responsive layout */
+@media only screen and (max-width: 1024px) {
+    #container {
+        width: 60%;
+    }
+
+    #cart_img {
+        margin-left: 0;
+        margin-right: 0;
+        display: block;
+        margin: auto;
+        max-width: 100%;
+        height: auto;
+    }
+
+
+}
+
+@media only screen and (max-width: 768px) {
+    #container {
+        width: 80%;
+    }
+
+    #cart_img {
+        margin-left: 0;
+        margin-right: 0;
+        display: block;
+        margin: auto;
+        max-width: 100%;
+        height: auto;
+    }
+}

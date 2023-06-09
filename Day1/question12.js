@@ -12,3 +12,6 @@ while(p1<=p2){
 }
 
 console.log(array);
+
+
+// 
