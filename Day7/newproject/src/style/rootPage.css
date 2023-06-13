@@ -1,0 +1,12 @@
+.outerDiv{
+    height: 30vh;
+    width: 30vw;
+    background-color: blue;
+}
+
+.innerDiv{
+    height: 70%;
+    width: 70%;
+    margin: auto;
+    background-color: aqua;
+}
