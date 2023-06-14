@@ -1,0 +1,15 @@
+.control_container{
+    width: 100%;
+    height: 30%;
+    border-bottom: 1px solid black;
+
+}
+.control_container button{
+    margin: 1.9em;
+    margin-left: 2.4em;
+    width: 5em;
+    height: 5em;
+    border-radius: 100%;
+    box-shadow: 2px 2px 2px 2px antiquewhite;
+}
+

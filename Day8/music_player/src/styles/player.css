@@ -1,0 +1,10 @@
+.container{
+   height: 50vh;
+   width: 40vw;
+   /* border: 1px solid black; */
+   margin: auto;
+   margin-top: 9em;
+   background-color: beige;
+   border-radius: 1em;
+   box-shadow: 2px 2px 20px 2px grey;
+}

@@ -1,0 +1,20 @@
+.songdisplay_container {
+    width: 90%;
+    height: 9%;
+    /* border: 1px solid black; */
+    padding-left: 1em;
+    padding-top: 0.4em;
+    margin: auto;
+   
+}
+.songdisplay_container i{
+    margin-right: 1em;
+
+}
+
+span {
+    font-weight: 600;
+
+  }
+
+  

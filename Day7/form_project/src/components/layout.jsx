@@ -50,9 +50,13 @@ export default function Layout() {
     }
 
     const listOfItems = () => {
+        if(inputList.length==0){
+            alert("value neede")
+        }else{
         setItems((olditems) => {
             return [...olditems, inputList];
         })
+    }
         setInputList("")
     }
 
@@ -65,7 +69,8 @@ export default function Layout() {
                     <br />
                     <input type='text'
                         value={inputList}
-                        placeholder='Add a item' onChange={itemEvent} />
+                        placeholder='Add a item' onChange={itemEvent} required/>
+                    {/* <input type='date'/> */}
                     <button onClick={listOfItems}> + </button>
 
                     <ol>
