@@ -3,6 +3,7 @@ import "../styles/songLog.css";
 import { tracks } from '../data/tracks';
 import Controls from './controls';
 import SongDisplay from './songDisplay';
+import Video from './video';
 
 
 export default function SongLog() {
@@ -20,6 +21,7 @@ export default function SongLog() {
   return (
     <>
       <Controls clicked={clicked} setClicked={setClicked} />
+      <Video/>
       <SongDisplay song={song}/>
       <div className='songLog_container'>
         {tracks.map((song) => (
