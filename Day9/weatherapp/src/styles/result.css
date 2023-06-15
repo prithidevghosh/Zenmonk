@@ -1,0 +1,26 @@
+i {
+    font-size: 30px;
+}
+
+.info_container {
+    /* border: 1px solid black; */
+    height: 15em;
+    width: 51em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.info_container div{
+    /* border:1px solid black; */
+    height: 45%;
+    width: 45%;
+    margin: 0.5em;
+    background-color: rgb(201, 198, 198);
+    box-shadow: 2px 2px 10px 2px #9a9999;
+    border-radius: 1em;
+    font-weight: bolder;
+    font-size: 18px;
+}
+.info_container div i{
+    margin: 1em;
+}
