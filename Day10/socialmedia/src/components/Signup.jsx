@@ -23,6 +23,8 @@ export default function Signup() {
     const hashPassword = () => {
         console.log("hello");
         try {
+
+
             let hash = bcrypt.hashSync(inputValue.password, 8);
             inputValue.password = hash;
 
