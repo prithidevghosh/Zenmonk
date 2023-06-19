@@ -18,18 +18,17 @@ export default function AddTask() {
         task_desc: ""
     })
 
-    const normFile = (e) => {
-        if (Array.isArray(e)) {
-            return e;
-        }
-        return e?.fileList;
-    };
+    const [error, setError] = useState("")
 
     const handleClick = (e) => {
         e.preventDefault();
 
+        (userInput.user == "") ? setError("*user is required") : (userInput.deadline == "") ?
+            setError("*deadline is required") : (userInput.task_desc == "") ? setError("*task description is required") :
+                dispatch(addTask({ ...userInput }))
 
-        dispatch(addTask({ ...userInput }))
+
+
     }
 
     const handleChange = (e) => {
@@ -52,7 +51,7 @@ export default function AddTask() {
                 <Form>
                     <Form.Group className="mb-3 lg-6" controlId="formBasicEmail">
 
-                        <Form.Control name='task_desc' onChange={handleChange} type="text" placeholder="enter task" />
+                        <Form.Control name='task_desc' onChange={handleChange} type="textarea" placeholder="enter task" />
 
                     </Form.Group>
                     <Form.Group className="mb-3">
@@ -74,6 +73,7 @@ export default function AddTask() {
                     <Button onClick={(e) => handleClick(e)} variant="primary" type="submit">
                         Submit
                     </Button>
+                    <strong style={{ color: "red" }}>{error}</strong>
                 </Form>
             </div>
         </>

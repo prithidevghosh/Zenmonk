@@ -1,5 +1,27 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
 .task_container {
+    height: 45vh;
     width: 40vw;
     margin: auto;
     margin-top: 3em;
+    padding: 2em;
+    /* border: 1px solid black; */
+    border-radius: 1em;
+    box-shadow: 2px 2px 10px 2px #bababa;
+    /* background-color: antiquewhite; */
+    background-color: rgba(255, 255, 255, .15);
+    backdrop-filter: blur(9px);
+}
+
+.task_container button {
+    width: 100%;
+}
+
+.task_container input {
+    background-color: rgb(255, 242, 225);
 }
