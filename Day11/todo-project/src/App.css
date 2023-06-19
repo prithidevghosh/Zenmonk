@@ -1,4 +1,12 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgIVjjBehhuEMPuDUymJGRu3X6xQUY-oZn_79GNiU-A8hJCP8Ym-Q_4n7N_6ob3K_ppYc&usqp=CAU");
   background-size: cover;
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }
