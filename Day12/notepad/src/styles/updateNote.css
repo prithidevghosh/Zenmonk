@@ -1,0 +1,16 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+}
+
+.updateNote_container {
+    width: auto;
+    height: 45vh;
+    margin: auto;
+    margin-top: 2em;
+    padding: 2em;
+    background-color: rgba(255, 255, 255, .15);
+    backdrop-filter: blur(15px);
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto Mono', monospace;
+}
