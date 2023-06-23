@@ -22,7 +22,11 @@ export const userDetail = createSlice({
             console.log("state users", state.users);
 
         },
-       
+        logOutUser: (state, action) => {
+            state.users.contact = "";
+            state.users.isLoggedIn = false;
+        }
+
 
 
     }
@@ -30,6 +34,6 @@ export const userDetail = createSlice({
 
 })
 
-export const { addUser } = userDetail.actions;
+export const { addUser, logOutUser } = userDetail.actions;
 
 export default userDetail.reducer;

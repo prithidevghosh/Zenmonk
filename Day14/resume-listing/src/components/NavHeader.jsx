@@ -4,9 +4,17 @@ import { Link } from 'react-router-dom'
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import { UseSelector, useSelector } from 'react-redux/es/hooks/useSelector';
 
-
+import { logOutUser } from '../features/usersSlice';
+import { useDispatch } from 'react-redux';
 export default function NavHeader() {
+    let dispatch = useDispatch();
+    let data = useSelector((state) => state.app);
+    let login = data.users.isLoggedIn;
+    const handleClick = () => {
+        dispatch(logOutUser());
+    }
     return (
         <Navbar bg="light" variant="light">
             <Container>
@@ -16,10 +24,10 @@ export default function NavHeader() {
                     </Link>
                 </Navbar.Brand>
                 <Nav className="me-auto">
-                    <Link style={{ textDecoration: "none", color: "black" }} to={"/login"}>
+                    {(login) ? <button onClick={handleClick}>Sign Out</button> : <Link style={{ textDecoration: "none", color: "black" }} to={"/login"}>
                         <FaSignInAlt /> Sign In
                     </Link>
-
+                    }
                 </Nav>
             </Container>
         </Navbar>

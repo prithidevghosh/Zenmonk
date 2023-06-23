@@ -1,5 +1,5 @@
 .addButton {
-    position: absolute;
-    right: 6px;
-    bottom: 6px;
-}
+    position: absolute !important;
+    right: 6px !important;
+    bottom: 6px !important;
+}   

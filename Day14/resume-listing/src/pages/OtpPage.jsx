@@ -1,4 +1,5 @@
 import React from 'react'
+import "../styles/otpPage.css"
 import { Input, Button } from 'antd';
 import { useLocation } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
@@ -23,8 +24,30 @@ export default function OtpPage() {
     return (
         <>
             {console.log(location.state.phoneNumber)}
-            <Input placeholder="Basic usage" />
-            <Button onClick={handleClick} type="primary">Primary Button</Button>
+            {/* <Input placeholder="Basic usage" />
+            <Button onClick={handleClick} type="primary">Primary Button</Button> */}
+
+            <div className='container'>
+                <h2>verify your account</h2>
+                <p>
+                    Enter the otp below
+                </p>
+
+                <div className='code-container'>
+                    <input type='number' className='code' placeholder='0' min='0' max='9' required />
+                    <input type='number' className='code' placeholder='0' min='0' max='9' required />
+                    <input type='number' className='code' placeholder='0' min='0' max='9' required />
+                    <input type='number' className='code' placeholder='0' min='0' max='9' required />
+
+                </div>
+
+                <div>
+                    <button onClick={handleClick} type='button' className='btn btn-primary'>Verify</button>
+                </div>
+
+
+            </div>
+
         </>
     )
 }

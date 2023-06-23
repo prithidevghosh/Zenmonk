@@ -1,4 +1,7 @@
 import React from 'react'
+import "../styles/login.css"
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import {
   AutoComplete,
   Button,
@@ -30,21 +33,23 @@ export default function Login() {
       </Select>
     </Form.Item>
   );
+  const notify = () => toast("Invalid Number");
   const handleClick = (e) => {
     e.preventDefault();
     setPhoneNumber("");
     phoneNumber.length == 10 ?
       navigate("/otp", { state: { phoneNumber: phoneNumber } }) :
-      alert("enter valid number");
+      notify();
 
   }
+
 
 
   return (
 
     <>
       {console.log(phoneNumber)}
-      <div>
+      {/* <div>
 
         <Form.Item
           name="phone"
@@ -65,7 +70,26 @@ export default function Login() {
           />
         </Form.Item>
         <Button onClick={handleClick} type="primary">Primary Button</Button>
-      </div>
+      </div> */}
+      <section>
+        <div class="form-box">
+          <div class="form-value">
+            <form action="">
+              <h2>Login</h2>
+              <div class="inputbox">
+                <ion-icon name="phone-portrait-outline"></ion-icon>
+                <input onChange={(e) => setPhoneNumber(e.target.value)}
+                  type="number" required />
+                <label for="">Phone Number</label>
+              </div>
+
+
+              <button onClick={handleClick}>Log in</button>
+
+            </form>
+          </div>
+        </div>
+      </section>
 
     </>
   )

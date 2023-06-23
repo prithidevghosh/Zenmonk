@@ -13,7 +13,9 @@ export const resumeDetail = createSlice({
         addResume: (state, action) => {
 
             state.resumes.push(action.payload);
+            console.log(state.resumes);
         },
+
 
 
     }

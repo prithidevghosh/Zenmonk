@@ -29,8 +29,8 @@ function App() {
   }
   ]
 
-  const privateURL=[{
-    
+  const privateURL = [{
+
   }]
   return (
     <>
@@ -41,9 +41,10 @@ function App() {
       <NavHeader />
       <Routes>
         <Route path='/' element={<Homepage />} />
+        <Route path='/otp' element={<OtpPage />} />
         <Route path='/login' element={<Login />} />
         <Route path='/register' element={<Register />} />
-        <Route path='/otp' element={<OtpPage />} />
+
         <Route path='/dashboard' element={<Dashboard />} />
       </Routes>
 
